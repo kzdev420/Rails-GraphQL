@@ -6,7 +6,7 @@ class Mutations::CreateOrder < Mutations::BaseMutation
     field :errors, [String], null: false
 
     def resolve(description:, total:)
-        order = Order.new(description: description, total: total, reference_key: SecureRandom.uuid)
+        order = Order.new(description: description, total: total)
         if order.save
             {
                 order: order,
