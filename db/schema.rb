@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_03_26_092102) do
     t.float "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "status"
+    t.string "status", default: "Failed"
   end
 
 end
